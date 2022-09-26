@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+
+\title{Prueba}
+\author{NICOLAS AGUILERA GARCIA}
+\date{July 2022}
+
+
+\begin{document}
+%begin{multicols}{2}%
+    \maketitle
+    
+    \begin{abstract}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus luctus ante, at posuere eros egestas a. Ut mi elit, malesuada a ultricies in, pellentesque facilisis risus. Suspendisse placerat ullamcorper aliquet. Cras id malesuada metus. Sed elementum, erat eu tempor pellentesque, est mauris dictum purus, non pulvinar nulla libero quis metus. Nulla imperdiet ligula at ipsum commodo, eget gravida elit pharetra. Maecenas at metus consectetur, eleifend purus ac, rutrum erat. Praesent congue tincidunt quam, ut tristique magna. Etiam in tortor et dolor tempus hendrerit. Quisque ut varius turpis. 
+    \end{abstract}
+    
+    \section{Introduccion}
+        Phasellus in dolor lacinia, vulputate odio eget, gravida justo. Nullam vestibulum, erat non porttitor gravida, lectus felis tempor tellus, eget condimentum nunc enim eu libero. Donec rhoncus enim est, et varius velit varius ac. Vivamus lacus nisi, ullamcorper eget nisi at, efficitur tincidunt orci. Nunc pharetra ut sapien sit amet sollicitudin. Vestibulum malesuada pulvinar leo ut lacinia. Morbi congue erat vel porta gravida. Duis eu diam quis sem tempus aliquet id id dui. Nullam semper aliquam ante, suscipit dignissim sapien feugiat vitae. Etiam et commodo lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis $ x^2 + y^2 = c^2 $ quam vehicula tempor vehicula. Phasellus hendrerit eget dolor sit amet scelerisque. In eu dolor tincidunt, ornare dui et, cursus orci.
+        
+        \begin{equation}
+            \label{integralDefinida}
+            \int_{a}^{b} \! f(x)  \,dx = F(b) - F(a)
+        \end{equation}
+        
+        Para hacer la referencia a una ecuacion dada se agrega un label a la ecuacion que se quiere utilizar, luego simplemente se llama como referencia: \eqref{integralDefinida}.
+        
+        \begin{equation}
+            \begin{split}
+                F(x) & = x^2 + \left(\frac{a}{b}\right)^2 \\
+                     & = x^2 + \frac{a^2}{b^2} \\
+                     & = \frac{x^2 b^2 + a^2}{b^2}
+            \end{split}
+        \end{equation}
+        
+        Praesent tempor vulputate massa, eget vestibulum erat porta ac. Fusce quis lacus at turpis pharetra dictum a ut odio. Quisque ac venenatis purus. Aenean eros nulla, ultrices quis ipsum quis, laoreet vestibulum tellus. Pellentesque vestibulum porta dui faucibus pharetra. Etiam id pretium ex. Sed rhoncus est sapien. Sed pretium orci sed condimentum dignissim. Suspendisse tincidunt vestibulum commodo. Duis volutpat in neque sed eleifend. In ut pretium mauris, eget efficitur lacus. Maecenas rhoncus, enim a pulvinar consectetur, lorem ipsum cursus libero, sed luctus nunc est et massa. Cras accumsan ipsum ex, id egestas nibh pharetra vel. Phasellus id lacus purus.
+
+        Ut at tempor orci, sed hendrerit elit. Sed vehicula ornare tincidunt. Nunc auctor condimentum ex, ornare congue justo lobortis sit amet. Maecenas at turpis sit amet diam blandit venenatis eu quis nunc. Nullam ut porttitor ipsum. Maecenas in vehicula ipsum, eget sagittis elit. Fusce posuere quam urna. Nam feugiat est sagittis est tristique, sit amet rhoncus leo lobortis.
+        
+        Agregando una figura:
+        
+        % \begin{figure}[h]
+        %     \centering
+        %     \includegraphics[scale=0.5]{imagen2.pdf}
+        %     \caption{Grafica de la funcion $ z = \cos\left(x^2 + y^2\right) $}
+        %     \label{etiquetaParaReferenciarImagen}
+        % \end{figure}
+                
+%\end{multicols}%
+\end{document}
