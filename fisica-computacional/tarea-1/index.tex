@@ -1,54 +1,135 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{amsmath}
-\usepackage{multicol}
+\documentclass[10pt]{article}
+\usepackage{geometry}
+\usepackage{multirow}
 \usepackage{graphicx}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[spanish]{babel}
 
-
-\title{Prueba}
-\author{NICOLAS AGUILERA GARCIA}
-\date{July 2022}
+\title{Tarea 1}
+\author{Nicolas Aguilera García - 2127303}
+\date{\today}
+\geometry{letterpaper, top=2.54cm, bottom=2.54cm, left=3cm, right=3cm}    
+\graphicspath{ {./images/} }
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2em}
 
 
 \begin{document}
-%begin{multicols}{2}%
     \maketitle
-    
-    \begin{abstract}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus luctus ante, at posuere eros egestas a. Ut mi elit, malesuada a ultricies in, pellentesque facilisis risus. Suspendisse placerat ullamcorper aliquet. Cras id malesuada metus. Sed elementum, erat eu tempor pellentesque, est mauris dictum purus, non pulvinar nulla libero quis metus. Nulla imperdiet ligula at ipsum commodo, eget gravida elit pharetra. Maecenas at metus consectetur, eleifend purus ac, rutrum erat. Praesent congue tincidunt quam, ut tristique magna. Etiam in tortor et dolor tempus hendrerit. Quisque ut varius turpis. 
-    \end{abstract}
-    
-    \section{Introduccion}
-        Phasellus in dolor lacinia, vulputate odio eget, gravida justo. Nullam vestibulum, erat non porttitor gravida, lectus felis tempor tellus, eget condimentum nunc enim eu libero. Donec rhoncus enim est, et varius velit varius ac. Vivamus lacus nisi, ullamcorper eget nisi at, efficitur tincidunt orci. Nunc pharetra ut sapien sit amet sollicitudin. Vestibulum malesuada pulvinar leo ut lacinia. Morbi congue erat vel porta gravida. Duis eu diam quis sem tempus aliquet id id dui. Nullam semper aliquam ante, suscipit dignissim sapien feugiat vitae. Etiam et commodo lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis $ x^2 + y^2 = c^2 $ quam vehicula tempor vehicula. Phasellus hendrerit eget dolor sit amet scelerisque. In eu dolor tincidunt, ornare dui et, cursus orci.
-        
-        \begin{equation}
-            \label{integralDefinida}
-            \int_{a}^{b} \! f(x)  \,dx = F(b) - F(a)
-        \end{equation}
-        
-        Para hacer la referencia a una ecuacion dada se agrega un label a la ecuacion que se quiere utilizar, luego simplemente se llama como referencia: \eqref{integralDefinida}.
-        
-        \begin{equation}
-            \begin{split}
-                F(x) & = x^2 + \left(\frac{a}{b}\right)^2 \\
-                     & = x^2 + \frac{a^2}{b^2} \\
-                     & = \frac{x^2 b^2 + a^2}{b^2}
-            \end{split}
-        \end{equation}
-        
-        Praesent tempor vulputate massa, eget vestibulum erat porta ac. Fusce quis lacus at turpis pharetra dictum a ut odio. Quisque ac venenatis purus. Aenean eros nulla, ultrices quis ipsum quis, laoreet vestibulum tellus. Pellentesque vestibulum porta dui faucibus pharetra. Etiam id pretium ex. Sed rhoncus est sapien. Sed pretium orci sed condimentum dignissim. Suspendisse tincidunt vestibulum commodo. Duis volutpat in neque sed eleifend. In ut pretium mauris, eget efficitur lacus. Maecenas rhoncus, enim a pulvinar consectetur, lorem ipsum cursus libero, sed luctus nunc est et massa. Cras accumsan ipsum ex, id egestas nibh pharetra vel. Phasellus id lacus purus.
 
-        Ut at tempor orci, sed hendrerit elit. Sed vehicula ornare tincidunt. Nunc auctor condimentum ex, ornare congue justo lobortis sit amet. Maecenas at turpis sit amet diam blandit venenatis eu quis nunc. Nullam ut porttitor ipsum. Maecenas in vehicula ipsum, eget sagittis elit. Fusce posuere quam urna. Nam feugiat est sagittis est tristique, sit amet rhoncus leo lobortis.
-        
-        Agregando una figura:
-        
-        % \begin{figure}[h]
-        %     \centering
-        %     \includegraphics[scale=0.5]{imagen2.pdf}
-        %     \caption{Grafica de la funcion $ z = \cos\left(x^2 + y^2\right) $}
-        %     \label{etiquetaParaReferenciarImagen}
-        % \end{figure}
-                
-%\end{multicols}%
+    \section*{Punto 1}
+    \subsection*{a)}
+        El copilador \textit{gcc} y \textit{G++} comparten y difieren en los siguientes putos:
+        \begin{itemize}
+            \item \textbf{Semejanza 1:} \textit{Ambos compiladores son programas que traducen el código fuente de un programa escrito en un lenguaje de programación a un lenguaje de máquina.}
+            
+            \item \textbf{Semejanza 1:} \textit{Ambos compiladores son capaces de traducir código fuente escrito en C y C++ a código objeto.}
+            
+            \item \textbf{Diferencia 1:} \textit{El compilador gcc cuenta con más macros predefinidas para compilar código C que las que cuenta por defecto G++.}
+            
+            \item \textbf{Diferencia 2:} \textit{El compilador gcc admite cualquier formato de archivo de .c y .cpp tratándolos como archivos de C y C++ respectivamente, mientras que G++ aunque puede compilar ambos tipos de archivo, serán tratados como archivos de C++.}
+        \end{itemize}
+
+    \subsection*{b)}
+        Razones por las que es útil aprender a desarrollar en C:
+        \begin{itemize}
+            \item Permite realizar un control granular de la memoria, lo que otorga un mejor manejo de los recursos del computador y optimizar bastante el programa.
+            \item Se puede compilar para funcionar en la mayoría de plataformas y sistemas operativos.
+            \item Es muy utilizado en la industria, lo que hace que cuente con muchas librerías ya desarrolladas que pueden solucionar problemas muy concretos de forma eficiente.
+        \end{itemize}
+
+        Razones por las que es útil aprender a desarrollar en Fortran:
+        \begin{itemize}
+            \item Es un lenguaje con una larga trayectoria y que ha sido usado en muchos proyectos de investigación.
+            \item Se encuentra bien documentado y es sencillo iniciar a desarrollar en él.
+            \item Cuenta con una gran cantidad de librerías y herramientas que facilitan el desarrollo de programas.
+        \end{itemize}
+
+    
+    \subsection*{c)}
+        La programación es muy útil en Física, ya que nos permite desarrollar herramientas que nos ayuden a entender el mundo que nos rodea. Esto mediante simulaciones de sistemas complejos o mediante el desarrollo de algoritmos que nos permitan resolver problemas de manera rápida y eficiente.
+    
+        De la materia, espero que esta me permita adquirir conocimientos sobre como poder aplicar los conocimientos de programación en la solución de problemas físicos, y que el aprendizaje se realice mediante ejemplos prácticos y no tan solo mediante teoría.
+
+
+
+
+
+    \section*{Punto 2}
+    The total Mie-scattering cross section per particle is given by,
+
+    \begin{equation}
+        \alpha_{ext} \left( \phi, m \right) = \pi r^2Q_{ext}\left( \phi, m \right)
+    \end{equation}
+
+    where $ Q_{ext}(\phi, m) $ is the extinction efficiency factor of a particle with radius $ r $, which depends on the refractive index $ m $ and the dimensionless size parameter $ \phi = \frac{2 \pi r}{\lambda} $, being $ \lambda $ the incident wavelength.
+
+    Additionally, based on the Mie theory, it is possible to estimate the total extinction with the contribution of particles in a define range in the atmospheric column through the Aerosol Optical Depth (AOD), employing the following expression,
+
+    \begin{equation}
+        AOD\left(\lambda,\phi,r \right) = \int_{0}^{r_{ref}} \pi r^2 Q_{ext}\left(\phi, m \right) \, n\left(r \right) \, dr
+    \end{equation}
+
+    where $ n(r) $ denotes the sum of n log-normal size distribution of particles as follow \cite{cite},
+
+    \begin{equation}
+        n\left(r \right) = \sum_{i = 1}^{n} \frac{N_{i}}{(2\pi)^{1/2} \log\sigma_{i}} \exp \left[-\frac{(\log r - \log \bar{r}_{i})^2}{2 \log^2\sigma_{i}}  \right]
+        \label{eq:eq1}
+    \end{equation}
+
+    where is $ N_{i} $ the particle concentration number with radius $ r $, $ \sigma_{i} $ is the standard deviation of the $ i^{th} $ log normal mode, and $ \bar{r}_{i} $ is the mean diameter.
+
+
+    \section*{Punto 3}
+
+    A continuación se presenta la tabla \ref{tab:tab1} con los símbolos del abecedario griego junto con algunas notaciones matemáticas útiles. Además, se referencia la ecuación \ref{eq:eq1} requerido y escrita con anterioridad en el texto.
+
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|c|} 
+        \hline
+        \multicolumn{4}{|c|}{Abecedario Griego} & \multirow{2}{*}{Símbolos Matemáticos}  \\ 
+        \cline{1-4}
+        \multicolumn{2}{|c|}{Minúsculas} & \multicolumn{2}{c|}{Mayúsculas} & \\ 
+        \hline
+        $\alpha$ & $\nu$      & $A$      & $M$      & $\oint_{a}^{b}$     \\ 
+        \hline
+        $\beta$      & $\xi$      & $B$      & $N$      & $\frac{\partial^2 }{\partial x^2}$     \\ 
+        \hline
+        $\gamma$      & $o$      & $\Gamma$      & $\Xi$      & $\overline{AB}$     \\ 
+        \hline
+        $\delta$      & $\pi$      & $\Delta$      & $O$      & $A \rightarrow B$     \\ 
+        \hline
+        $\epsilon$      & $\rho$      & $E$      & $\Pi$      & $\pi \approx 3.14$     \\ 
+        \hline
+        $\zeta$      & $\sigma$      & $Z$      & $P$      & $\iint_{a}^{b}$     \\ 
+        \hline
+        $\eta$      & $\tau$      & $H$      & $\Sigma$      & $x \propto y$     \\ 
+        \hline
+        $\theta$      & $\upsilon$      & $\Theta$      & $T$      & $x \in \mathbb{R}$     \\ 
+        \hline
+        $\iota$      & $\phi$      & $I$      & $\Upsilon$      & $y \pm \bigtriangleup y$     \\ 
+        \hline
+        $\kappa$      & $\chi$      & $K$      & $\Phi$      & $\lim_{x\rightarrow a}$     \\ 
+        \hline
+        $\lambda$      & $\psi$      & $\Lambda$      & $X$      & $$     \\ 
+        \hline
+        $\mu$ & $\omega$ & $\Psi$ & $\Omega$ & $$ \\
+        \hline
+    \end{tabular}
+    \caption{Uso de sintaxis matemática en \LaTeX
+    \label{tab:tab1}}
+    \end{table}
+
+
+
+    \begin{thebibliography}{9}
+        \bibitem{cite} 
+        P. V. Hobbs, Aerosols-cloud-climate interactions, Vol, 54, Academic Press, 1993.
+    \end{thebibliography}
+
+    
 \end{document}
