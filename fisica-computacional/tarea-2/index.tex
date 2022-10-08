@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{listings}
 \usepackage[spanish]{babel}
 
 \title{Tarea 2}
@@ -19,4 +20,93 @@
 
 \begin{document}
     \maketitle
+
+    \section*{Punto 1}
+        \subsection*{a)}
+        Un lenguaje compilado es aquel que realiza un proceso de traducción una única vez, tomando el archivo de código fuente y generando un archivo ejecutable. En cambio, un lenguaje interpretado es aquel que realiza la traducción de código fuente a código ejecutable en tiempo de ejecución, por lo que no es necesario generar un archivo ejecutable. Para el caso de \textit{C++} y \textit{Python}, \textit{C++} es un lenguaje compilado, mientras que \textit{Python} es un lenguaje interpretado.
+
+        \subsection*{b)}
+        Los lenguajes sensitivos son aquellos que distinguen entre mayúsculas y minúsculas, lo que hace que por ejemplo \texttt{name}, \texttt{NAME} y \texttt{Name} sean variables distintas. Tanto \textit{C++} como \textit{Python} son lenguajes sensitivos.
+
+        \subsection*{c)}
+        Lenguajes de alto nivel son aquellos que son más cercanos a la forma en que los humanos expresamos ideas, por lo que son más fáciles de leer y escribir, un ejemplo seria \textit{Python}; por el contrario, los lenguajes de bajo nivel son aquellos que son más cercanos a la forma en que las computadoras procesan la información, por lo que requieren de más esfuerzo para ser leídos y escritos, pero otorgan mayor control sobre el hardware y la posibilidad de realizar mayor optimización, un ejemplo de estos lenguajes sería \textit{C++}.
+
+        \subsection*{d)}
+        El archivo fuente es el archivo que contiene el código desarrollado que se desea ejecutar, en el caso de \textit{C++} es un archivo con extensión \textit{.cpp} y en el caso de \textit{Python} es un archivo con extensión \textit{.py}.
+
+        \subsection*{e)}
+        El archivo objetó es el archivo resultante de la compilación del archivo fuente, este solo se produce para lenguajes compilados y su contenido no tiene un significado para el humano pero si para la computadora.
+
+        \subsection*{f)}
+        
+
+    \section*{Punto 2}
+        La instrucción \texttt{gcc -o hola hola.cpp} se encarga de realizar la compilación del archivo \texttt{hola.cpp} (archivo fuente) y convertirlo a un archivo ejecutable con el nombre \texttt{hola} (archivo objeto) utilizando como compilador a \texttt{gcc}; sin embargo, genera error al tratar de compilar un archivo con extensión \texttt{.cpp} con un compilador que trata su contenido como si fuese código de \textit{C}.
+        
+        Al cambiar el compilador a \texttt{g++} se logra compilar el archivo \texttt{hola.cpp} y generar el archivo ejecutable \texttt{hola}.
+
+    \section*{Punto 3}
+        \subsection*{a)}
+            Una variable es un espacio de memoria que puede ser utilizado para almacenar un valor, este valor puede ser modificado durante la ejecución del programa.
+
+        \subsection*{b)}
+            Un identificador es una secuencia de caracteres que se utiliza para nombrar variables, funciones, clases, etc. En \textit{C++} los identificadores deben cumplir con las siguientes reglas:
+            \begin{itemize}
+                \item Deben comenzar con una letra o un guion bajo (\texttt{\_}).
+                \item No pueden contener espacios en blanco.
+                \item No pueden contener caracteres especiales.
+                \item No pueden ser palabras reservadas.
+            \end{itemize}
+            Ejemplos de identificadores válidos son \texttt{\_dbRoute} y \texttt{results}, mientras que \texttt{1st\_list} y \texttt{char} no lo son.
+
+
+        \subsection*{c)}
+            Que \textit{C++} sea un lenguaje fuertemente tipado quiere decir que las variables deben ser declaradas con un tipo de dato especifico, por lo que no se puede cambiar el tipo de dato de una variable una vez que ha sido declarada. Por ejemplo, si se declara una variable \texttt{int a} no se puede cambiar o asignar otro tipo que no sea un entero.
+            Los tipos de datos fundamentales en \textit{C++} son:
+            \begin{itemize}
+                \item \texttt{bool}: representa un valor booleano, puede ser \texttt{true} o \texttt{false}.
+                \item \texttt{char}: representa un carácter.
+                \item \texttt{int}: representa un número entero.
+                \item \texttt{float}: representa un número de punto flotante.
+                \item \texttt{double}: representa un número de punto flotante de mayor precisión.
+                \item \texttt{void}: representa la ausencia de valor.
+                \item \texttt{enum}: representa una lista numerada de valores definida por el usuario.
+            \end{itemize}
+            Normalmente, los tipos más utilizados son: \texttt{char}, \texttt{int}, \texttt{float} y \texttt{double}.
+
+        
+        \subsection*{d)}
+            La sintaxis para declarar una variable es la siguiente:
+            \begin{lstlisting}
+                tipo identificador;
+            \end{lstlisting}
+            Algunos ejemplos:
+            \begin{lstlisting}
+                int a;
+                float b;
+                double c;
+                char d;
+                bool e;
+            \end{lstlisting}
+
+
+        \subsection*{e)}
+            Inicialización de una variable es asignar un valor a la variable cuando o después de que esta se declara, por ejemplo:
+            \begin{lstlisting}
+                int a = 5;
+                float b = 3.14;
+                double c = 2.718281828459045;
+                char d = 'a';
+                bool e = true;
+            \end{lstlisting}
+
+    \section*{Punto 4}
+        Un tipo de dato compuesto es aquel que se compone de otros tipos de datos, por ejemplo, un arreglo es un tipo de dato compuesto que se compone de un conjunto de elementos del mismo tipo de dato. Para la utilización de estos tipos de datos se debe de incluir la librería correspondiente en el encabezado del archivo fuente en el que se utilice.
+
+        El \texttt{string} es un tipo de dato compuesto, el cual representa un conjunto de caracteres que se pueden manipular como un solo elemento, permitiendo de esta forma la manipulación de cadenas de caracteres como textos.
+
+        Para utilizar el tipo de dato \texttt{string} se debe de incluir la librería \texttt{string} en el encabezado, de la siguiente manera:
+        \begin{lstlisting}
+            #include <string>
+        \end{lstlisting}
 \end{document}
