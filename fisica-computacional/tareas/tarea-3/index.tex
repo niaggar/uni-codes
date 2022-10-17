@@ -1,0 +1,209 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[spanish]{babel}
+
+\title{Tarea 3}
+\author{Nicolas Aguilera García - 2127303}
+\date{\today}
+\geometry{letterpaper, top=2.54cm, bottom=2.54cm, left=3cm, right=3cm}    
+\graphicspath{ {./images/} }
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2em}
+
+
+\begin{document}
+    \maketitle
+
+    \section*{Punto 1}
+        \subsection*{a)}
+        En \textit{C++} los literales son aquellos valores que se asignan a variables que expresan valores particulares dentro del código, como por ejemplo \texttt{nombre = "Nicolas";} en donde a \texttt{"Nicolas"} se le llama constante literal.
+        Los tipos de literales pueden ser enteros, reales, caracteres, cadenas de caracteres, booleanos, etc. Un ejemplo de estos valores literales es:
+        \begin{verbatim}
+            5           // Entero
+            3.6e-40     // Real de punto flotante
+            "Hola"      // Cadena de caracteres
+            `a'         // Caracter
+            true        // Booleano
+        \end{verbatim}
+        También pueden definirse valores como constantes haciendo uso de la palabra reservada \texttt{const} al inicio de la declaración e inicialización de las variables, esto siguiendo la forma:
+        \begin{verbatim}
+            // Estructura:
+            // const [tipo] [identificador] = [valor];
+            
+            const double gravedad = 9.81;
+        \end{verbatim}
+        Otra forma es mediante las definiciones del preprocesador \texttt{\#define} el cual reemplaza antes de compilación toda llamada de la definición con el valor que se haya dado a esta sin validar tipos ni sintaxis. Esto debe de usarse en el encabezado del archivo de código.
+
+
+        \subsection*{b)}
+        El operador de asignación en \textit{C++} es el operador \textit{=}. Este operador asigna el valor de la derecha al valor de la izquierda. Por ejemplo, si tenemos la variable \textit{a} y queremos asignarle el valor de \textit{b}, entonces escribimos \textit{a = b}.
+        \begin{verbatim}
+            int a, b, c;
+            a = 1;
+            b = 2;
+            c = a;
+            a = b = c;
+            
+            // a = 1, b = 1 y c = 1
+        \end{verbatim}
+
+
+        \subsection*{c)}
+        Los siguientes son operadores que permiten realizar operaciones aritméticas.
+        \begin{itemize}
+            \item Suma: \textit{a + b}
+            \item Resta: \textit{a - b}
+            \item Multiplicación: \textit{a * b}
+            \item División: \textit{a / b}
+            \item Módulo: \textit{a \% b}
+        \end{itemize}
+        Ejemplo: 
+        \begin{verbatim}
+            float a = 7, b = 2.4, c = 4;
+            float res = a + ( b - c * a ) / ( (int)a % (int)b );
+            
+            // res = -18.6
+        \end{verbatim}
+
+
+        \subsection*{d)}
+        \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|c|} 
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Tipo}} & \textbf{Tamaño (bytes)}  \\ 
+        \hline
+        \texttt{char}                                & 1                        \\ 
+        \hline
+        \texttt{unsigned char}                       & 1                        \\ 
+        \hline
+        \texttt{int}                                 & 4                        \\ 
+        \hline
+        \texttt{short int}                           & 2                        \\ 
+        \hline
+        \texttt{long int}                            & 8                        \\ 
+        \hline
+        \texttt{long long int}                       & 8                        \\ 
+        \hline
+        \texttt{unsigned int}                        & 4                        \\ 
+        \hline
+        \texttt{float}                               & 4                        \\ 
+        \hline
+        \texttt{double}                              & 8                        \\ 
+        \hline
+        \texttt{long double}                         & 16                       \\
+        \hline
+        \texttt{byte}                         & 1                       \\
+        \hline
+        \texttt{bit}                         & 1/8                       \\
+        \hline
+        \end{tabular}
+        \end{table}
+
+
+    \section*{Punto 2}
+        \begin{verbatim}
+            #include<iostream>
+            #include<cmath>
+            using namespace std;
+
+            int main() {
+                int a, b, c;
+
+                cout << "Ingrese tres números enteros: ";
+                cin >> a >> b >> c;
+
+                int suma = a + b + c;
+                int producto = a * b * c;
+                int diferencia = a - b - c;
+                float cociente = (float)a / (float)b / (float)c;
+                int modulo = a % b % c;
+
+                cout << "La suma es: " << suma << endl;
+                cout << "El producto es: " << producto << endl;
+                cout << "La diferencia es: " << diferencia << endl;
+                cout << "El cociente es: " << cociente << endl;
+                cout << "El módulo es: " << modulo << endl;
+
+                return 0;
+            }
+        \end{verbatim}
+        
+    
+    \section*{Punto 3}
+        \begin{verbatim}
+            #include<iostream>
+            #include<cmath>
+            #define PI 3.14159265
+            using namespace std;
+            
+            int main() {
+                float radio, diametro, circunferencia, area, volumen;
+            
+                cout << "Ingrese el radio de la circunferencia: ";
+                cin >> radio;
+            
+                diametro = 2 * radio;
+                circunferencia = 2 * PI * radio;
+                area = PI * pow(radio, 2);
+                volumen = (4 * PI * pow(radio, 3)) / 3;
+            
+                cout << "El diámetro es: " << diametro << endl;
+                cout << "La circunferencia es: " << circunferencia << endl;
+                cout << "El área es: " << area << endl;
+                cout << "El volumen es: " << volumen << endl;
+                
+                return 0;
+            }
+        \end{verbatim}
+    
+    
+    \section*{Punto 4}
+        \begin{verbatim}
+            if ((a == 0) && (b == 0))
+            { }
+            if ((a > c) && (b <= a))
+            { }
+            
+            if ((b > c + a) || (a >= 5))
+            { }
+            if ((a != 0) || (b == 0))
+            { }
+            
+            if (!(a == 0))
+            { }
+        \end{verbatim}
+    
+    
+    \section*{Punto 5}
+        \begin{verbatim}
+            #include <iostream>
+            #include <string>
+            using namespace std;
+            
+            int main ()
+            {
+                int n;
+                cin >> n;
+                cout << "[elijo el " << n << "]" << endl;
+            
+                int doble = 2 * n;
+                cout << "[al doblarlo me da " << doble << "]" << endl;
+            
+                int suma = doble + 6;
+                cout << "[al sumarle 6, obtengo " << suma << "]" << endl;
+                
+                int division = (suma / 2) - 3;
+                cout << "[al dividirlo entre 2 y restarle 3, obtengo el numero inicial: " << division << "]" << endl;
+            
+                return 0;
+            }
+        \end{verbatim}
+\end{document}
