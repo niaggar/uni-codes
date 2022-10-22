@@ -6,7 +6,7 @@ int main() {
     int a, b, c;
 
     cout << "Ingrese tres números enteros: ";
-    cin >> a >> b >> c;
+    cin >> a >> b >> c; // 1 2 3 -- con espacio entre ellos
 
     int suma = a + b + c;
     int producto = a * b * c;
