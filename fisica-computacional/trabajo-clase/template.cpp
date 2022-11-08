@@ -1,10 +1,7 @@
 
-#include<iostream> // screen
-#include<cmath> // math funcionts
-using namespace std; // standard library of C++
-
-
-// ----------> Enjoy :)
+#include<iostream>
+#include<cmath>
+using namespace std;
 
 
 int main() {
