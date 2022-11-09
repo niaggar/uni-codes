@@ -56,9 +56,6 @@ int main(){
     double result;
     int N = 140;
 
-    ofstream out;
-	out.open("punto-1.dat");
-
     // Primera función
     result = trapezoidal_rule(first_function, 1, 2, N);
     cout << "El resultado de la primera función es: " << result << endl;

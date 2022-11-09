@@ -37,9 +37,6 @@ double df(double x){
 
 
 int main(){
-    ofstream out;
-	out.open("punto-3.dat");
-
     double x, x0, tolerance;
     int N;
 
@@ -55,7 +52,6 @@ int main(){
     else{
         cout << "Solution does not converge." << endl;
     }
-
 
     return 0;
 }
