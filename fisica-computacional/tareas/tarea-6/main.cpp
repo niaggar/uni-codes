@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <cmath>
 #include "methods.h"
 #include "functions.h"
@@ -87,12 +88,25 @@ void segundo_punto()
         outplt << get_plt_content(i);
     }
 
-    // system("gnuplot ./img-gif.plt");
-    // system("convert -delay 10 -loop 0 ./images/sequence/*.png animacion.gif");
+    system("gnuplot ./img-gif.plt");
+    system("convert -delay 10 -loop 0 ./imgs/sequence/*.png ./imgs/trayectoria-gif.gif");
 }
 
 int main()
 {
+    ofstream outplt;
+
+    for (int i = 1; i <= n; i++)
+    {
+        string fileName;
+        fileName = "./create-img/img-gif" + to_string(i) + ".plt";
+        outplt.open(fileName);
+        
+        outplt << get_plt_content(i);
+        
+        outplt.close();
+    }
+
     primer_punto();
     segundo_punto();
 
